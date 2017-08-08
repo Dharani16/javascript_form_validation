@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!-- Scripting-->
+	<script type="text/javascript" src="js/validation.js"></script>
+	</head>
+	<body>
+	<h1>Form validation in js</h1><br/>
+	<form action="" method="get" name="myForm" onsubmit="return(formValidation());">
+
+	<table>
+		<tr>
+		   <td><label>FirstName : </label></td>
+		   <td>
+		   		<input type = "text" name = "fname"  onkeypress="firstNameFunction();" onkeyup="firstNameKeyUp();"  /> 
+           		<div id="errorFirstName" style="color: red;"></div> 
+      	   </td> 
+		 </tr>
+ 
+		<tr> 
+			<td><label>LastName : </label></td>
+			<td>
+          		<input type = "text" name = "lname" onkeypress="lastNameFunction();" onkeyup="lastNameKeyUp();" /> <br/>
+          		<div id="errorLastName" style="color: red;"></div> 
+        	</td> 
+		</tr>
+
+		<tr>	
+			<td><label> Gender : </label></td>
+			<td>
+			    <input type = "radio" name = "gender" value = "Male" onkeypress="genderFunction();" checked="" /> Male
+			    <input type = "radio" name = "gender" value = "Female" onkeypress="genderFunction();"/> Female 
+          		<div id="errorGender" style="color: red;"></div>
+			</td>
+		</tr> 
+
+
+		<tr>
+			<td> <label> Email ID : </label> </td>
+			<td> 
+            	<input type = "text" name = "email" id="txtEmail" onkeypress="emailFunction();"  onchange="emailKeyUp();" /> 
+            	<div id="errorEmail" style="color: red;"></div>
+         	</td>
+		</tr>
+
+		<tr>
+			<td> <label> Phone number : </label> </td>
+			<td> 
+            	<input type = "text" name = "phone" id="phoneNumber" onkeypress="phoneFunction();" onchange="phoneKeyUp();" /> 
+            	<div id="errorPhoneNumber" style="color: red;"></div>
+         	</td>
+		</tr>
+
+		<tr>
+			<td><label> Job Designation : </label> </td>
+			<td> 
+				<select name="jobRole" onchange="jobRoleFunction();"  >
+					<option value="0" selected> --Choose your designation--</option>
+					<option value="1"> UI Designer </option>
+					<option value="2"> Developer </option>
+					<option value="3"> Tester </option>
+					<option value="4"> Networking </option>
+				</select> 
+            	<div id="errorJobRole" style="color: red;"></div>
+			</td>
+		</tr>
+
+		<tr>
+			<td><label> Technology </label></td>
+			<td>
+            	<input type="text" list= "tech" name="technology" autocomplete="off" placeholder="Choose technology" onkeypress="techFunction();" >
+					<datalist id="tech">					  
+					    <option value="Angular"></option>
+					    <option value="Node"></option>
+					    <option value="React"></option>  
+					</datalist> 
+           			<div id="errorTechnology" style="color: red;"></div>
+			</td>
+		</tr> 
+
+		<tr>
+			<td><label>Password : </label></td>
+			<td>
+        	    <input type="password" id="password"  name="psw" onkeypress="pswFunction();"  onchange="passwordKeyUp();" />
+                <div id="errorPassword" style="color: red;"></div>
+            </td> 
+		</tr>
+
+		<tr>
+			<td><label>Confirm Password : </label></td>
+			<td>
+              	<input type="password" id="confirmPassword" name="cpsw" onkeypress="cpswFunction();" />
+              	<div id="errorConfirmPassword" style="color: red;"></div>
+          	</td> 
+		</tr>
+
+ 		<tr>
+		 	<td>
+ 				<input type = "submit" name = "submit" value="Register" /> 
+ 				<input type="Reset" value="Reset" onclick="reloadFunction()">
+ 			</td>	
+ 	 	</tr>
+ 	</table>
+ 	</form>
+</body>
+</html>
