@@ -1,6 +1,5 @@
 function formValidation(){
-	//var cpass = document.myForm.cpsw.value;
-	//var psw = document.myForm.psw.value;
+
 	//firstName validate
    	if (document.myForm.fname.value == "") {
 		//alert("Please enter firstName");
